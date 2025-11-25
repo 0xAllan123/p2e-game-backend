@@ -23,7 +23,7 @@ import {
 } from "@solana/web3.js";
 import { bs58 } from "@project-serum/anchor/dist/cjs/utils/bytes";
 import { createGame } from "./db";
-import { IDL as Jackpot } from "./jackpot";
+import { IDL as P2E } from "./P2E";
 import WalletSeed from "./backend-wallet.json";
 import { Server } from "socket.io";
 
@@ -40,7 +40,7 @@ const wallet = new Wallet(
   Keypair.fromSecretKey(Uint8Array.from(WalletSeed), { skipValidation: true })
 );
 const newProvider = new anchor.AnchorProvider(solConnection, wallet, {});
-var program = new anchor.Program(Jackpot, programId, newProvider) as Program;
+var program = new anchor.Program(P2E, programId, newProvider) as Program;
 
 export const NONCE_LIST = ["WPNHsFPy", "4QUPibxi", "LUcdzUyn", "2uH66Ws3"];
 

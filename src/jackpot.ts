@@ -1,6 +1,6 @@
-export type Jackpot = {
+export type P2E = {
   "version": "0.1.0",
-  "name": "jackpot",
+  "name": "P2E",
   "instructions": [
     {
       "name": "initialize",
@@ -247,9 +247,9 @@ export type Jackpot = {
   ]
 };
 
-export const IDL: Jackpot = {
+export const IDL: P2E = {
   "version": "0.1.0",
-  "name": "jackpot",
+  "name": "P2E",
   "instructions": [
     {
       "name": "initialize",
